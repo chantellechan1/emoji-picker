@@ -6,10 +6,11 @@ import UserRoutes from './routes/user';
 dotenv.config();
 
 const app: Express = express();
+app.use(express.json()) // for parsing application/json
 const port = process.env.PORT;
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Express + TypeScript Server');
+  res.send('Emoji Picker API');
 });
 
 // register routes
