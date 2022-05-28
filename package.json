@@ -1,0 +1,14 @@
+{
+  "name": "emoji-picker",
+  "version": "1.0.0",
+  "description": "Emoji-picker with frontend UI and backend API for users to see each emoji choices for other users and choose their own emoji.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chantelle Chan",
+  "license": "ISC",
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  },
+  "packageManager": "yarn@3.2.1"
+}

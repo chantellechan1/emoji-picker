@@ -1,5 +1,5 @@
 # emoji-picker
-
+Emoji-picker with frontend UI and backend API for users to see each emoji choices for other users and choose their own emoji.  
 
 ## backend 
 This directory holds the backend API for the emoji-picker project.  
@@ -12,6 +12,7 @@ Run this list of commands to install necesary dependencies and start a dev serve
 4. `npm start`
 
 ## frontend
+This directory holds the frontend UI for the emoji-picker project.
 - use chakra UI for grid
 - used https://emoji-api.com/emojis api to GET emojis
 - use String.fromCodePoint(`0x${code_point_from_api}) to display emoji
@@ -28,6 +29,16 @@ Run this list of commands to install necesary dependencies and start a dev serve
         - `npm install -D typescript @types/express @types/node`
         - `npx tsc --init`
 4. 03:45 - frontend
+    - note that create-react-app has trouble with snap versions of node/npm
+        - [see issue here](https://github.com/facebook/create-react-app/issues/12253)
+        - resolved issue by using yarn to run create-react-app with typescript template flag
+        - from project root
+            - `npm install -g yarn`
+            -  `yarn set version berry`
+            - `sudo yarn create react-app frontend --template typescript` 
+            -  `sudo mkdir ./frontend/node_modules/.cache`
+            - create file in `./frontend/node_modules/.cache` called `.eslintcache`
+            - `sudo chmod ugo+rwx node_modules/.cache/.eslintcache`
 5. 04:30 - documentation
 
 
