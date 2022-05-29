@@ -11,7 +11,7 @@ function App() {
         <CurrentUser />
       </GridItem>
       <GridItem colSpan={2} background='blue.200'>
-        <AllUsers/>
+        <AllUsers />
       </GridItem>
     </Grid>
   );
