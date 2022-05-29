@@ -1,7 +1,14 @@
 # emoji-picker
 Emoji-picker with frontend UI and backend API for users to see each emoji choices for other users and choose their own emoji.  
 
-## backend 
+## Project Summary
+This project allows users to set their name and emoji for those on their team to see. In the left pane on the frontend, users can set their username and emoji. On the right pane, there is a refresh button and a list that displays all users on their team (we simulate multiple users in different browser tabs). The backend API handles user creation, user emoji setting, getting the current user's emoji, and getting all users.
+  
+![screenshot of frontend](https://github.com/chantellechan1/emoji-picker/blob/main/docs/frontend.png)
+  
+Challenges were encounted during this project on both the frotend and backend parts of the project. On the frontend, more time than expected was spent setting up the project and development environment, due to an issue with the Ubuntu snap version of node/npm. Additionally, the popover toggling has a notable delayed effect, as efforts to programatically close the popover on emoji selection were implemented but not perfected due to time contraints. On the backend, project setup was relatively smooth, though due to time contraints, error catching/handling and data integrity (ensuring no duplicate users) were neglected. Along with the list of extension ideas presented under [Rough Notes](#markdown-header-rough-notes), this would be an area of opportunity for extending the project. 
+
+## Backend 
 This directory holds the backend API for the emoji-picker project.  
 
 ### Get Started
@@ -11,11 +18,14 @@ Run this list of commands to install necesary dependencies and start a dev serve
 3. `npm run build`
 4. `npm start`
 
-## frontend
-This directory holds the frontend UI for the emoji-picker project.
-- use chakra UI for grid
-- used https://emoji-api.com/emojis api to GET emojis
-- use String.fromCodePoint(`0x${code_point_from_api}) to display emoji
+## Frontend
+This directory holds the frontend UI for the emoji-picker project.  
+
+### Get Started
+Run this list of commands to install necesary dependencies and start a dev server.
+1. `cd frontend`
+2. `npm install`
+4. `npm start`
 
 ## worklog
 1. 00:10 - set up vm, install node, set up local git
@@ -28,7 +38,8 @@ This directory holds the frontend UI for the emoji-picker project.
         - `npm install --save express dotenv`
         - `npm install -D typescript @types/express @types/node`
         - `npx tsc --init`
-4. 03:45 - frontend
+    - use String.fromCodePoint(`0x${code_point_from_api}) to convert between emoji char and unicode codepoint
+4. 04:00 - frontend
     - note that create-react-app has trouble with snap versions of node/npm
         - [see issue here](https://github.com/facebook/create-react-app/issues/12253)
         - resolved issue by using yarn to run create-react-app with typescript template flag
@@ -41,6 +52,8 @@ This directory holds the frontend UI for the emoji-picker project.
             - `echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`
                 - followed [this issue](https://github.com/facebook/create-react-app/issues/7612)
             - finally was able to `npm start` or `yarn start`
+    - use chakra UI for grid
+    - used https://emoji-api.com/emojis api to GET emojis
 5. 04:30 - documentation
 
 
