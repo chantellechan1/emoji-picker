@@ -36,9 +36,11 @@ This directory holds the frontend UI for the emoji-picker project.
             - `npm install -g yarn`
             -  `yarn set version berry`
             - `sudo yarn create react-app frontend --template typescript` 
-            -  `sudo mkdir ./frontend/node_modules/.cache`
-            - create file in `./frontend/node_modules/.cache` called `.eslintcache`
-            - `sudo chmod ugo+rwx node_modules/.cache/.eslintcache`
+            - `sudo mkdir ./frontend/node_modules/.cache`
+            - `sudo chmod ugo+rwx node_modules/.cache/`
+            - `echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`
+                - followed [this issue](https://github.com/facebook/create-react-app/issues/7612)
+            - finally was able to `npm start` or `yarn start`
 5. 04:30 - documentation
 
 
