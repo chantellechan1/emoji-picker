@@ -15,8 +15,10 @@ This directory holds the backend API for the emoji-picker project.
 Run this list of commands to install necesary dependencies and start a dev server.
 1. `cd backend`
 2. `npm install`
-3. `npm run build`
-4. `npm start`
+3. Rename `.env-template` to `.env`, and set the port that the backend should run on.
+    - In the `proxy` property of `package.json` in `frontend/`, requests are proxied to port `8000`, this is the expected port for the backend API to run on. Please ensure the port specified in `backend/.env` and `frontend/package.json` match.
+4. `npm run build`
+5. `npm start`
 
 ## Frontend
 This directory holds the frontend UI for the emoji-picker project.  
@@ -25,6 +27,7 @@ This directory holds the frontend UI for the emoji-picker project.
 Run this list of commands to install necesary dependencies and start a dev server.
 1. `cd frontend`
 2. `npm install`
+3. Rename `.env-template` to `.env`, and request an API key from (https://emoji-api.com/), assign the key to `REACT_APP_EMOJI_API_KEY` in `.env`
 4. `npm start`
 
 ## worklog
