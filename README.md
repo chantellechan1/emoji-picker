@@ -27,8 +27,9 @@ This directory holds the frontend UI for the emoji-picker project.
 Run this list of commands to install necesary dependencies and start a dev server.
 1. `cd frontend`
 2. `npm install`
-3. Rename `.env-template` to `.env`, and request an API key from (https://emoji-api.com/), assign the key to `REACT_APP_EMOJI_API_KEY` in `.env`
-4. `npm start`
+3. Rename `.env-template` to `.env`, and request an API key from [this emoji API](https://emoji-api.com/)
+    - Assign the key to `REACT_APP_EMOJI_API_KEY` in `.env`
+5. `npm start`
 
 ## worklog
 1. 00:10 - set up vm, install node, set up local git
